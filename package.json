@@ -1,0 +1,19 @@
+{
+  "name": "next-image-abort-hang-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gen": "node gen-image.mjs",
+    "build": "next build",
+    "start": "next start -p 3999",
+    "repro": "node repro.mjs http://localhost:3999"
+  },
+  "dependencies": {
+    "next": "canary",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}
